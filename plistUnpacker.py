@@ -39,6 +39,7 @@ def tree_to_dict(tree):
             elif tree[index+1].tag == 'dict':
                 d[item.text] = tree_to_dict(tree[index+1])
     return d
+    
 def gen_png(plist_filename,png_filename):
     format = None
     root = ElementTree.fromstring(open(plist_filename,'r').read())
