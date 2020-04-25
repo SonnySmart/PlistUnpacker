@@ -1,33 +1,20 @@
-# pkm2png - Convert PKM files to PNG images
+# pkm2png
+convert pkm image to png
 
-## Installation
+execute pkm2png.bat (windows) 
 
-pkm2png requires the [Python Imaging Library][0] ([documentation][1]), which
-can be a very finicky installation. I suggest using [pip][2] to install it,
-since solutions to most installation errors can be found through a quick
-Google search.
+it will search pkm file in  current folder and subfolders , and convert to png file.
 
-[0]: http://www.pythonware.com/products/pil/
-[1]: http://www.pythonware.com/library/pil/handbook/index.htm
-[2]: http://pypi.python.org/pypi/pip
+linux / macos :
+you must download android sdk, etc1tool is in $ANDROID_SDK/platform-tools
 
-## Usage
+----------------------------------------------------
 
-Start by importing the module:
+pkm图片格式转换为png图片
 
-    import pkm2png
+双击 pkm2png.bat 执行
 
-From here, you can convert a PKM file:
+会将当前目录及子目录中所有的 pkm 图片转换为 png 图片图片。
 
-    my_pkm = open('/path/to/pokemonfile.pkm', 'r').read()
-    my_pkm_img = pkm2png.pkm2png(gen=5, data=my_pkm)
-    with open('/path/to/image.png', 'w') as f:
-        f.write(my_pkm_img)
-
-Or you can convert a PNG image:
-
-    # if on Windows, make sure to open in binary mode
-    my_pkm_img = open('/path/to/image.png', 'rb').read()
-    my_pkm = pkm2png.png2pkm(my_pkm_img)
-    with open('/path/to/pokemonfile.pkm', 'w') as f:
-        f.write(my_pkm[1])
+linux或macos
+需要下载android sdk，etc1tool在 ANDROID_SDK/platform-tools 目录下。
