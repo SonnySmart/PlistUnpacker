@@ -3,7 +3,7 @@
 
 import os
 import sys
-import pkm2png.pkm2png
+from pkm2png import pkm2png
 
 SUFFIX = ".pkm"
 
@@ -27,4 +27,4 @@ def main():
         _pkm2png(sys.argv[1],OutPath)
 
 if __name__ == '__main__':
-    #main()
+    main()
