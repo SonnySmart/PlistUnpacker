@@ -9,7 +9,7 @@ suffix_pkm = '.pkm'
 suffix_png = '.png'
 suffix_plist = '.plist'
 cwd = os.getcwd()
-exe = os.path.join(os.path.join(cwd, 'pkm2png'), 'etcpack.exe')
+exe = os.path.join(os.path.join(cwd, 'pkm2png'), 'etc1tool.exe')
 
 def pkm2png(path):
     files = FileUtil.getAlllFilesPathOfCurrentDirectory(path)
@@ -21,8 +21,8 @@ def pkm2png(path):
             #print(png)
             plist = pkm.replace(suffix_pkm, suffix_plist)
             #print(plist)
-            #etcpack [input.pkm] [outputdir] -ext PNG
-            command = '%s %s %s -ext PNG' % (exe, pkm, png)
+            #etc1tool.exe %%x --decode -o %%x.png
+            command = '%s %s --decode -o %s' % (exe, pkm, png)
             print(command)
             os.system(command)
     pass
